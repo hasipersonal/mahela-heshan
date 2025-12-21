@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
 .slick-dots {
     bottom: 30px;
 }
@@ -94,12 +96,25 @@
     color: #fff;
 }
 .slide-subtitle h4{
- font-size:16px;
- color: #fff;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    /* margin-bottom: 10px; */
 }
 .slide-text p {
+    font-family: 'Playfair Display', serif;
     color: #fff;
     margin-bottom: 0;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+sup {
+    font-size: 0.6em; /* 60% of the normal font size */
+    vertical-align: top;
+    position: relative;
+    top: -0.1em; /* Moves it slightly up */
 }
 
 @media(max-width:767px){
@@ -112,6 +127,9 @@
     }
     .item1,.item2{
            height: 580px;
+    }
+    .slide-text p {
+        font-size: 20px;
     }
 }
 

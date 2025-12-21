@@ -23,13 +23,13 @@ class SimpleSlider extends Component {
               <div className="container">
                   <div className="slide-content">
                       <div className="slide-subtitle">
-                          <h4>WERE GETTING MARRIED</h4>
+                          <h4>WE'RE GETTING MARRIED</h4>
                       </div>
                       <div className="slide-title">
                           <h2>Save Our Date</h2>
                       </div>
                       <div className="slide-text">
-                          <p>23 January 2026</p>
+                          <p>23<sup>rd</sup> January 2026</p>
                       </div>
                   </div>
               </div>
@@ -39,13 +39,13 @@ class SimpleSlider extends Component {
                 <div className="container">
                       <div className="slide-content">
                           <div className="slide-subtitle">
-                              <h4>WERE GETTING MARRIED</h4>
+                              <h4>WE'RE GETTING MARRIED</h4>
                           </div>
                           <div className="slide-title">
                               <h2>Save Our Date</h2>
                           </div>
                           <div className="slide-text">
-                              <p>23 January 2026</p>
+                              <p>23<sup>rd</sup> January 2026</p>
                           </div>
                       </div>
                     </div>
@@ -56,13 +56,13 @@ class SimpleSlider extends Component {
                 <div className="container">
                       <div className="slide-content">
                           <div className="slide-subtitle">
-                              <h4>WERE GETTING MARRIED</h4>
+                              <h4>WE'RE GETTING MARRIED</h4>
                           </div>
                           <div className="slide-title">
                               <h2>Save Our Date</h2>
                           </div>
                           <div className="slide-text">
-                              <p>23 January 2026</p>
+                              <p>23<sup>rd</sup> January 2026</p>
                           </div>
                       </div>
                     </div>
