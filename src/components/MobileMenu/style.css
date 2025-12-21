@@ -28,7 +28,7 @@
     width: 40px;
     height: 40px;
     line-height: 37px;
-    border: 1px solid #e7f7fe;
+    border: 1px solid #b4773d;
     text-align: center;
     margin-left: auto;
     margin-right: 10px;
@@ -66,7 +66,7 @@
 
 .logo2 {
     padding: 20px;
-    border-bottom: 1px solid #e7f7fe;
+    border-bottom: 1px solid #b4773d;
     padding-bottom: 13px;
 }
 
@@ -104,8 +104,8 @@
 
 .header .responsivemenu .card-body li {
     padding: 0;
-    border-left: 1px solid #e7f7fe;
-    border-right: 1px solid #e7f7fe;
+    border-left: 1px solid #b4773d;
+    border-right: 1px solid #b4773d;
 }
 
 .header .responsivemenu li p {
