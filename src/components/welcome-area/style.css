@@ -92,3 +92,30 @@ welcome-area
         padding: 85px 0 0;
     }
 }
+
+@media (max-width:767px){
+    .welcome-content {
+        padding: 60px 0 30px;
+    }
+
+    .welcome-content p {
+        font-size: 14px;
+        padding: 20px 10px 30px;
+    }
+    
+    .welcome-content h2 {
+        font-size: 35px;
+        color: #fff;
+    }
+
+    /* --- ADD THIS SECTION --- */
+    .welcome-content h4 {
+        font-size: 16px;    /* Makes the text smaller (adjust as needed) */
+        line-height: 1.5;   /* Adds breathing room between lines */
+        padding: 0 15px;    /* Prevents text from touching the screen edges */
+    }
+    /* ------------------------ */
+
+    /* You had a duplicate .welcome-content block here in your original code, 
+       I merged it above, but ensure you don't have conflicting paddings. */
+}
