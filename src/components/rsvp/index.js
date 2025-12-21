@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import emailjs from '@emailjs/browser'; // 1. Import EmailJS
 import './style.css'
 
 class Rsvp extends Component {
+
+    constructor(props) {
+        super(props);
+        this.form = React.createRef(); // 2. Create a ref to access the form element
+    }
 
     state = {
         name: '',
@@ -11,7 +17,6 @@ class Rsvp extends Component {
         notes: '',
         error: {}
     }
-
 
     changeHandler = (e) => {
         const error = this.state.error;
@@ -26,56 +31,52 @@ class Rsvp extends Component {
     subimtHandler = (e) => {
         e.preventDefault();
 
-        const { name,
-            email,
-            rsvp,
-            events,
-            notes, error } = this.state;
+        const { name, email, rsvp, events, notes, error } = this.state;
 
-        if (name === '') {
-            error.name = "Please enter your name";
-        }
-        if (email === '') {
-            error.email = "Please enter your email";
-        }
-        if (rsvp === '') {
-            error.rsvp = "Select your number of rsvp";
-        }
-        if (events === '') {
-            error.events = "Select your event list";
-        }
-        if (notes === '') {
-            error.notes = "Please enter your note";
+        // Validation Logic
+        if (name === '') error.name = "Please enter your name";
+        if (email === '') error.email = "Please enter your email";
+        if (rsvp === '') error.rsvp = "Select your number of rsvp";
+        if (events === '') error.events = "Select your event list";
+        if (notes === '') error.notes = "Please enter your note";
+
+        if (Object.keys(error).length > 0) {
+            this.setState({ error });
         }
 
+        // Check if there are NO errors before sending
+        if (!error.name && !error.email && !error.rsvp && !error.events && !error.notes) {
+            
+            // 3. Send Email using EmailJS
+            // Replace these strings with your actual IDs from Step 2
+            const SERVICE_ID = 'service_ftf56d7';
+            const TEMPLATE_ID = 'template_2xix6vb';
+            const PUBLIC_KEY = '1IoX4qwn6oCYR1v04';
 
-        if (error) {
-            this.setState({
-                error
-            })
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this.form.current, PUBLIC_KEY)
+                .then((result) => {
+                    console.log('Email successfully sent!', result.text);
+                    alert("Message Sent Successfully!");
+                    
+                    // Clear form after successful send
+                    this.setState({
+                        name: '',
+                        email: '',
+                        rsvp: '',
+                        events: '',
+                        notes: '',
+                        error: {}
+                    });
+                }, (error) => {
+                    console.log('Failed to send email:', error.text);
+                    alert("Failed to send message. Please try again.");
+                });
         }
-        if (error.name === '' && error.email === '' && error.email === '' && error.rsvp === '' && error.events === '' && error.notes === '') {
-            this.setState({
-                name: '',
-                email: '',
-                rsvp: '',
-                events: '',
-                notes: '',
-                error: {}
-            })
-        }
-
-        console.log(this.state);
-        console.log(this.state.error.notes);
     }
 
     render() {
-
-        const { name,
-            email,
-            rsvp,
-            events,
-            notes, error } = this.state;
+        const { name, email, rsvp, events, notes, error } = this.state;
+        
         return (
             <div id="rsvp" className="rsvp-area go-rsvp-area section-padding">
                 <div className="container">
@@ -88,7 +89,8 @@ class Rsvp extends Component {
                                         <p>Please reserve before January 5th, 2026.</p>
                                     </div>
                                 </div>
-                                <form onSubmit={this.subimtHandler}>
+                                {/* 4. Attach the ref to the form tag */}
+                                <form ref={this.form} onSubmit={this.subimtHandler}>
                                     <div className="contact-form form-style">
                                         <div className="row">
                                             <div className="col-12 col-sm-6">
@@ -112,9 +114,9 @@ class Rsvp extends Component {
                                             <div className="col col-sm-6 col-12">
                                                 <select className="form-control" onChange={this.changeHandler} value={events} name="events">
                                                     <option disabled value="">I Am Attending*</option>
-                                                    <option value="1">Al events</option>
-                                                    <option value="2">Wedding ceremony</option>
-                                                    <option value="3">Reception party</option>
+                                                    <option value="All events">All events</option>
+                                                    <option value="Wedding ceremony">Wedding ceremony</option>
+                                                    <option value="Reception party">Reception party</option>
                                                 </select>
                                                 <p>{error.events ? error.events : ''}</p>
                                             </div>
