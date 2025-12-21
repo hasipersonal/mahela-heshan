@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400&display=swap');
+
 .couple-item {
     padding-top: 50px;
 }
@@ -31,10 +33,10 @@
 }
 
 .couple-content h3 {
-    font-size: 21px;
-    color:#b4773d;
-    font-family: 'Muli', sans-serif;
-    text-transform: uppercase;
+    font-size: 40px;
+    color: #b4773d;
+    font-family: 'Great Vibes', cursive; 
+    text-transform: capitalize; 
 }
 
 .couple-content2 h4 {
@@ -44,7 +46,10 @@
 
 
 .couple-content p {
-    padding: 20px 0 30px;
+    /* padding: 20px 0 30px; */
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .couple-content2 p {
