@@ -9,30 +9,42 @@
 .slick-dots li.slick-active button:before{
     color: #649e93;
 }
-.item1{
-    background: url(../../images/slider/1.jpg);
+.item1 {
+    /* Update this line: add center center and no-repeat */
+    background: url(../../images/slider/1.jpg) center center no-repeat;
+    /* Add this line: This ensures the image covers the area without stretching */
+    background-size: cover; 
+    
     height: 950px;
-    display: flex!important;
+    display: flex !important;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     position: relative;
 }
 
-.item2{
-    background: url(../../images/slider/2.jpg);
+.item2 {
+    /* Update this line */
+    background: url(../../images/slider/2.jpg) center center no-repeat;
+    /* Add this line */
+    background-size: cover;
+
     height: 950px;
-     display: flex!important;
+    display: flex !important;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     position: relative;
 }
 
-.item3{
-    background: url(../../images/slider/3.jpg);
+.item3 {
+    /* Update this line */
+    background: url(../../images/slider/3.jpg) center center no-repeat;
+    /* Add this line */
+    background-size: cover;
+
     height: 950px;
-     display: flex!important;
+    display: flex !important;
     justify-content: center;
     flex-direction: column;
     width: 100%;
@@ -203,4 +215,20 @@
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+@media(max-width:767px){
+    .slide-content h2 {
+        font-size: 35px;
+    }
+    .slide-content {
+        width: 280px;
+        height: 235px;
+    }
+
+    /* I added .item3 here and changed height to 100vh */
+    .item1, .item2, .item3 {
+           height: 100vh; /* This makes it fill the full mobile screen */
+           /* OR use height: 800px; if you want a fixed tall size */
+    }
 }
