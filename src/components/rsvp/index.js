@@ -124,7 +124,7 @@ class Rsvp extends Component {
                                             </div>
                                         </div>
                                         <div className="col-12 text-center">
-                                            <button id="submit" type="submit" className="submit">Send Invitation</button>
+                                            <button id="submit" type="submit" className="submit">Send</button>
                                         </div>
                                     </div>
                                 </form>

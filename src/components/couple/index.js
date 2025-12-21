@@ -26,10 +26,10 @@ const Couple = () => {
                                         </div>
                                         <div className="social-icon">
                                             <ul className="d-flex">
-                                                <li><Link to='/'><span className="fa fa-facebook"></span></Link></li>
-                                                <li><Link to='/'><span className="fa fa-twitter"></span></Link></li>
-                                                <li><Link to='/'><span className="fa fa-google-plus"></span></Link></li>
-                                                <li><Link to='/'><span className="fa fa-linkedin"></span></Link></li>
+                                                <li><a href="https://www.facebook.com/shanekanayake98" target="_blank"><span className="fa fa-facebook"></span></a></li>
+                                                <li><a href="#"><span className="fa fa-instagram"></span></a></li>
+                                                <li><a href="#"><span className="fa fa-twitter"></span></a></li>
+                                                <li><a href="#"><span className="fa fa-linkedin"></span></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -48,14 +48,14 @@ const Couple = () => {
                                     <div className="couple-text">
                                         <div className="couple-content">
                                             <h3>Nelum Madhumali</h3>
-                                            <p>Daughter of Mr. 7 mrs. Warnasooriya</p>
+                                            <p>Daughter of Mr. & Mrs. Warnasooriya</p>
                                         </div>
                                         <div className="social-icon">
                                             <ul className="d-flex">
-                                                <li><Link to='/'><span className="fa fa-facebook"></span></Link></li>
-                                                <li><Link to='/'><span className="fa fa-twitter"></span></Link></li>
-                                                <li><Link to='/'><span className="fa fa-google-plus"></span></Link></li>
-                                                <li><Link to='/'><span className="fa fa-linkedin"></span></Link></li>
+                                                <li><a href="https://www.facebook.com/profile.php?id=100071916755380" target="_blank"><span className="fa fa-facebook"></span></a></li>
+                                                <li><a href="#"><span className="fa fa-instagram"></span></a></li>
+                                                <li><a href="#"><span className="fa fa-twitter"></span></a></li>
+                                                <li><a href="#"><span className="fa fa-linkedin"></span></a></li>
                                             </ul>
                                         </div>
                                     </div>
