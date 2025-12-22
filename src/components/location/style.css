@@ -1,4 +1,3 @@
-
 .service-area-menu ul li {
     display: inline-block;
     padding: 10px 0;
@@ -6,6 +5,8 @@
 
 .service-area-menu ul {
     justify-content: space-around;
+    margin-top: 50px;
+    background: #b4773d;
 }
 
 .service-area-menu li a {
@@ -14,50 +15,75 @@
     color: #fff;
     border-right: 1px solid #eee;
 }
+
 .service-area-menu li:last-child a {
     border-right: none;
 }
+
 .service-area-menu li a.active,
 .service-area-menu li a:hover {
     background: #b4773d;
     color: #fff;
 }
 
-.service-area-menu ul {
-    margin-top: 50px;
-    background: #b4773d;
-}
-
-.ceromony-content2 {
-    padding-left: 30px;
-}
-
+/* --- Card Container Styles --- */
 .Ceremony-wrap {
     margin-top: 30px;
-    background: #fff8f1;
+    background: #fff8f1; /* Fallback color */
+    padding: 60px 30px; /* Increased padding for better spacing */
+    border-radius: 8px;
+    position: relative; /* Necessary for the overlay positioning */
+    overflow: hidden;   /* Ensures the image doesn't spill out */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Optional: adds subtle depth */
+}
+
+/* --- Background Image Overlay Styles --- */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.15; /* Low opacity makes it a watermark */
+    z-index: 0;    /* Sends it to the back */
+    filter: grayscale(20%); /* Optional: Slight B&W for elegance */
 }
 
 #people .Ceremony-wrap {
     background: none;
-}
-#people .Ceremony-wrap{
     margin-top: 0;
 }
+
 .service-area2 .Ceremony-wrap {
     background: #fff8f1;
 }
+
+/* --- Content Styles --- */
 .ceromony-content {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 100%;
     height: 100%;
+    position: relative; /* Brings text to front */
+    z-index: 1;        /* Sits on top of the overlay */
+}
+
+/* Removed old padding-left since layout is centered */
+.ceromony-content2 {
+    padding-left: 0;
 }
 
 .ceromony-content h3 {
     font-size: 30px;
     color: #b4773d;
     margin-bottom: 16px;
+    font-weight: 700;
 }
 
 .ceromony-content .location-btn {
@@ -69,25 +95,31 @@
     text-align: left;
     background: none;
 }
+
 .ceromony-content .btn.location-btn:hover {
     background: none!important;
     color: #b4773d;
 }
+
 .ceromony-content .location-btn:focus {
     box-shadow: none;
 }
 
 .ceromony-content span {
     display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .ceromony-content p {
     padding: 20px 0;
-    padding-right: 20px;
+    max-width: 750px; /* Limits width so text is readable */
+    margin: 0 auto;
+    color: #444;      /* Slightly darker text for readability over image */
+    font-weight: 500;
 }
 
-
-
+/* --- Modal/Dialog Styles --- */
 .MuiDialog-paperWidthSm {
     max-width: 900px !important;
 }
@@ -110,6 +142,9 @@
 @media (max-width: 600px) {
     .modal-body iframe {
         width: 100%;
+    }
+    .service-area-menu li a {
+        padding: 10px 20px;
     }
 }
 
